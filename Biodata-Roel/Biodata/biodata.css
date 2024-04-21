@@ -1,0 +1,223 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../Biodata/Background BIODATA.jpg');
+    background-size: cover;
+}
+
+.biodata-container {
+    background-color: rgba(180, 186, 193, 0.36);
+    box-shadow: 10px 5px 40px rgba(0, 0, 0, 5);
+    border: 2px solid black;
+    border-radius: 50px;
+    width: 90%;
+    height: 90%;
+    margin: auto; /* center horizontally */
+    margin-top: 5%;
+    padding: 45px;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between; /* space between columns */
+}
+
+.biodata-container h2 { /* Biodata Form TEXT TITLE */
+    position: relative;
+    left: -10%;
+    bottom: -3%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: black;
+    color: wheat;
+    width: 80%;
+    border-radius: 40px;
+}
+.biodata-container p { /* Fill in all the necessary details TEXT*/
+    position: relative;
+    left: 53%;
+    bottom: 6%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+/* ALL INPUT */
+.left-column,
+.middle-column,
+.right-column {
+    width: 30%; /* width for three columns */
+}
+
+.left-column {
+    margin-left: 2%; 
+    margin-right: 3%;
+    margin-top: -6%;
+}
+
+.middle-column {
+    margin-top: 4%;
+    margin-right: 3%;
+}
+
+.right-column {
+    margin-right: 2%; /* margin between columns */
+    margin-top: 4%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+select {
+    width: calc(100% - 20px); 
+    margin: 2px 0; /* margin top every input*/
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input[type="submit"] {
+    position: relative;
+    bottom: 10px;
+    left: 50%;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: 1s;
+    width: 50%;
+}
+
+input[type="submit"]:hover{
+    background-color: green;
+    color: white;
+    font-size: 17px;
+}
+
+
+
+
+/* for output or display output */
+.Output_Biodata {
+    display: none; /* Initially hide the container */
+    background-color: rgb(255, 255, 255); 
+    box-shadow: 10px 5px 40px rgba(0, 0, 0, 5);
+    border: 2px solid black;
+    border-radius: 50px;
+    width: 50%;
+    margin: 20px auto; 
+    padding: 20px;
+}
+
+.OutputForm { /* Biodata Form TEXT TITLE */
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.OutputP { /* Your Inputted Credentials TEXT */
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.Output_Biodata label {
+    width: 200px; /* width for alignment */
+    display: inline-block; /* for horizontally line */
+    font-weight: bold;
+    margin-left: 20%;
+}
+
+.Output_Biodata .output {
+    display: inline-block;
+    margin-left: 15%; /* space between label and output */
+}
+
+
+
+
+/* Media queries for responsive design or for mobile users */
+@media screen and (max-width: 768px) {
+    .form-group {
+        width: 100%;
+    }
+
+    .biodata-container,
+    .Output_Biodata {
+        width: 90%;
+    }
+
+    .Output_Biodata {
+        width: 80%;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    input[type="email"] {
+        width: 100%;
+        margin-left: 5px;
+    }
+
+    label, .data{
+        width: 100%;
+        font-size: 14px;
+    }
+    label{
+        margin-left: 70px;
+    }
+    .output{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+        position: absolute;
+        margin-left: 400px;
+        margin-bottom: 17px;
+    }
+
+
+    .biodata-container {
+          flex-direction: column; /* Change to single column layout for small screens */
+    }
+    
+    .left-column,
+    .middle-column,
+    .right-column {
+        width: 100%; /* width for small screens */
+        margin: 0; /* margin for small screens */
+    }
+    
+    .left-column,
+    .middle-column,
+    .right-column {
+        margin-bottom: 20px; /* space between columns for small screens */
+    }
+}
